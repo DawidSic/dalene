@@ -1,0 +1,524 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.6rem;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 5rem;
+		height: 3rem;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		position: absolute;
+		right: 0;
+		height: 0.3rem;
+		content: '';
+		background-color: white;
+		transition: width 0.3s;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 1.3rem;
+			width: 60%;
+		}
+		&::before {
+			top: 2.7rem;
+			width: 30%;
+			transition-delay: 0.1s;
+		}
+	}
+}
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	background-color: black;
+	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	z-index: 100;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: white;
+		text-decoration: none;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleY(0);
+			transition: transform 0.3s;
+			background-color: white;
+			content: '';
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: white;
+}
+
+.btn-special-animation {
+	position: relative;
+	transition: background-color 0.3s;
+	overflow: hidden;
+	z-index: 0;
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+		z-index: -1;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
+.nav-active {
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 100;
+}
+.logo {
+	width: 200px;
+	height: 100px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.navbar {
+	color: white;
+	background-color: black;
+	padding: 1rem 0;
+	position: fixed;
+	height: 10vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+	padding-left: 5%;
+	padding-right: 5%;
+	display: none;
+
+	li {
+		list-style: none;
+		display: inline-block;
+		padding: 2rem;
+		a {
+			text-decoration: none;
+			color: white;
+			font-size: 2.3rem;
+			&:hover {
+				color: #646464;
+				transition: 0.2s;
+			}
+		}
+	}
+}
+// section {
+// 	margin-left: 4.5%;
+// 	margin-right: 4.7%;
+// 	border-left: solid 4.5px white;
+// 	border-right: solid 4.5px white;
+// }
+.hero {
+	height: 90vh;
+	.hero-text {
+		position: absolute;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		padding: 20% 10%;
+		color: white;
+		h1 {
+			font-size: 4.5rem;
+			font-weight: 400;
+			font-family: 'outfit';
+		}
+	}
+	.hero-button {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, -50%);
+		padding: 15px 25px;
+		border-radius: 8px;
+		font-size: 2rem;
+		background-color: transparent;
+		border: 3px solid white;
+		color: white;
+		cursor: pointer;
+		background-color: black;
+		&::before {
+			background-color: white;
+		}
+		&:hover {
+			color: black;
+		}
+	}
+}
+.house-icon {
+	position: relative;
+	top: 50%;
+	width: 100%;
+	z-index: -1000;
+	.arrows {
+		position: absolute;
+		bottom: -35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/dalene-hero.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 35%;
+	}
+}
+.testing {
+	max-width: 100%;
+	max-height: 100vw;
+}
+
+@media (max-height: 700px) {
+	.hero {
+		.hero-text {
+			h1 {
+				font-size: 3.5rem;
+			}
+		}
+	}
+	.house-icon {
+		top: 40%;
+	}
+}
+
+@media (min-width: 768px) {
+	.house-icon {
+		top: 40%;
+	}
+}
+@media (min-width: 992px) {
+	.burger-btn {
+		display: none;
+	}
+	.navbar {
+		display: flex;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero {
+		.hero-text {
+			top: 35%;
+			h1 {
+				font-size: 5.5rem;
+			}
+		}
+	}
+	.house-icon {
+		top: 0;
+		.arrows {
+			bottom: -25%;
+			background-size: 20%;
+			background-position: center;
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.hero {
+		.hero-text {
+			top: 30%;
+			h1 {
+				font-size: 5.5rem;
+			}
+		}
+	}
+	.house-icon {
+		top: -10%;
+	}
+}
+
+//ABOUT
+.about {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 8rem;
+}
+
+.about-heading {
+	color: white;
+	font-style: 5rem;
+	font-weight: 300;
+	text-align: center;
+	padding: 8rem 0rem;
+}
+.about-text {
+	color: white;
+	text-align: center;
+	font-size: 1.8rem;
+	padding: 0 1rem;
+	line-height: 1.5;
+}
+.link-more {
+	display: block;
+	font-size: 1.8rem;
+	text-align: center;
+	color: blue;
+	text-decoration: none;
+	padding: 1rem 1rem 4rem 1rem;
+}
+.boss {
+	width: 100%;
+	padding: 0 1rem;
+	filter: brightness(0.8);
+	border-radius: 15px;
+}
+.about-svg {
+	position: absolute;
+	z-index: -1000;
+	overflow: hidden;
+}
+
+
+//SERVICES
+.services {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.services-top {
+	color: white;
+	font-weight: 400;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 4rem;
+}
+.services-heading {
+	color: white;
+	font-size: 2.5rem;
+	font-weight: 300;
+	text-align: center;
+	padding: 8rem 0rem;
+}
+.services-cards {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 25px;
+	padding-bottom: 5rem;
+	.services-card {
+		height: 100px;
+		width: 95%;
+		background-color: #fff;
+		border-radius: 16px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		.card-heading {
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+			font-weight: 300;
+			font-size: 2.5rem;
+		}
+	}
+	.card-1 {
+		background-image: url('/img/Rens-av-ventilasjonskanaler-1.webp');
+		text-decoration: none;
+	}
+	.card-2 {
+		background-image: url('/img/service.jpeg');
+	}
+	.card-3 {
+		background-image: url('/img/4c891f3b82fb6e0d5701487f755bb51c-image.jpeg');
+	}
+	.card-4 {
+		background-image: url('/img/PAX\ Levante\ 30\ Baderomsvifte.jpg');
+		background-size: 170%;
+		background-position: top;
+	}
+	.card-5 {
+		background-image: url('/img/3751735.jpg');
+		background-size: cover;
+		background-position: bottom;
+	}
+}
+
+//CONTACT//
+
+.contact-top {
+	color: white;
+	font-weight: 400;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 4rem;
+}
+.contact-text {
+	color: white;
+	font-size: 2.5rem;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 8rem;
+	padding-bottom: 3rem;
+}
+.contact {
+	padding-bottom: 6rem;
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+
+	&__form-label {
+		margin-bottom: 0.2em;
+		text-transform: uppercase;
+		color: white;
+	}
+
+	&__form-input {
+		margin-bottom: 1.6em;
+		padding: 0.6em 1.2em;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.6rem;
+	}
+	&__form-textarea {
+		margin-bottom: 1.6em;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		padding: 0.6em 1.2em;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.6rem;
+		max-width: 100%;
+		min-height: 200px;
+	}
+
+	&__form-btn {
+		margin-top: 2rem;
+		align-self: center;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: black;
+		border: none;
+		border-radius: 8px;
+		background-color: white;
+		cursor: pointer;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		&::before {
+			background-color: black;
+		}
+	}
+	.msgg {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+}
+
+//FOOTER
+
+.footer {
+	color: white;
+	background-color: #333;
+	border-top: white 2px solid;
+	&__bottom-text {
+		padding: 2rem;
+		text-align: center;
+	}
+}

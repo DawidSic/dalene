@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalene Ventilasjon</title>
+    <script src="https://kit.fontawesome.com/5c49569796.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+
+
+    <div class="logo" id="home"><img src="./img/logo.jpg" alt="dalene ventilasjon logo"></div>
+    <nav class="nav">
+
+
+        <div class="nav__items">
+            <a href="#home" class="nav__item">Hjem</a>
+            <a href="#about" class="nav__item">Om oss</a>
+            <a href="#services" class="nav__item">Tjenester</a>
+            <a href="#contact" class="nav__item">Kontakt</a>
+        </div>
+
+    </nav>
+    <nav class="navbar">
+        <div class="logo" id="home"><img src="./img/logo.jpg" alt="dalene ventilasjon logo"></div>
+        <ul>
+            <li><a href="#">Hjem</a></li>
+            <li><a href="#about">Om oss</a></li>
+            <li><a href="#services">Tjenester</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>ALT INNEN BOLIG VENTILASJON</h1>
+        </div>
+        <div class="house-icon">
+            <svg class="testing" viewBox="0 -10 100 100" fill="none" stroke="white" stroke-width="1">
+
+                <polyline points="5,110 5,25 0,25 50,1 100,25 95,25 95,110" />
+
+            </svg>
+
+            <div class="arrows"></div>
+        </div>
+        <a href="#about"><button class="hero-button btn-special-animation">Finn ut meir</button></a>
+    </div>
+
+
+    <svg class="about-svg" viewBox="0 00 100 650" xmlns="http://www.w3.org/2000/svg">
+        <line x1="5" y1="650" x2="5" y2="0" stroke="white" stroke-width="1" />
+        <line x1="95" y1="650" x2="95" y2="0" stroke="white" stroke-width="1" />
+
+        <!-- If you do not specify the stroke
+             color the line will not be visible -->
+    </svg>
+
+    <section class="about" id="about">
+        <h2 class="about-heading">Hvorfor er luft, ventilasjon og inneklima så viktig?</h2>
+        <p class="about-text">Vi tilbringer stadig mer tid innendørs, hele 90 prosent av tiden faktisk. Luften vi
+            puster
+            inn er viktig for vår helse og velferd. <br><br>
+
+            Det er derfor viktig med bra ventilasjon som gir et godt inneklima. Hensikten med ventilasjon er å
+            fjerne
+            forurensninger i luften som for eksempel støvpartikler, avgasser og fukt, og tilføre ren og frisk luft.
+            <br><br>
+        </p>
+        <a href="./about.html" class="link-more">Les meir her...</a>
+        <!-- <img src="./img/03668b67-a2bd-40fe-a33e-d7b592cdf73c.webp" alt="Michael Dalene" class="boss"> -->
+
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="services-top">Våre Tjenester</h2>
+        <h3 class="services-heading">Dalene ventilasjon utfører alt av ventilasjonsarbeid til din bustad </h3>
+        <div class="services-cards">
+            <a href="service1.html" class="services-card card-1">
+                <h3 class="card-heading">KANAL RENSING</h3>
+            </a>
+            <div class="services-card card-2">
+                <h3 class="card-heading">SERVICE</h3>
+            </div>
+            <div class="services-card card-3">
+                <h3 class="card-heading">BALANSERT VENTILASJON</h3>
+            </div>
+            <div class="services-card card-4">
+                <h3 class="card-heading">BADEROMSVIFTE</h3>
+            </div>
+            <div class="services-card card-5">
+                <h3 class="card-heading">KJØKKENVENTILATOR</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h2 class="contact-top heading">
+            KONTAKT OSS
+        </h2>
+        <p class="contact-text">Kontakt oss gjerne for ein uforpliktande prat!
+        </p>
+
+        <form action="mail.php" method="post" class="contact__form">
+
+            <div class="contact__form-top">
+
+                <label for="name" class="contact__form-label">First and last name:</label>
+                <input type="text" class="contact__form-input" id="name" name="name" required>
+
+                <label for="email" class="contact__form-label">E-mail:</label>
+                <input type="text" id="email" name="email" class="contact__form-input" required>
+
+            </div>
+
+            <label for="msg" class="contact__form-label msgg">Message:</label>
+            <textarea id="msg" name="msg" class="contact__form-textarea txet" required></textarea>
+
+            <button type="submit" class="contact__form-btn">SEND</button>
+
+
+        </form>
+
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+
+            <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Dalene Ventilasjon</p>
+        </div>
+
+
+    </footer>
+
+
+
+
+</body>
+<script src="./js/script.js"></script>
+
+</html>
