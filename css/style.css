@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
   font-size: 1.6rem;
   background-color: black;
   overflow-x: hidden;
@@ -206,7 +207,6 @@ body {
 .hero .hero-text h1 {
   font-size: 4.5rem;
   font-weight: 400;
-  font-family: "outfit";
 }
 .hero .hero-button {
   position: absolute;
@@ -309,40 +309,45 @@ body {
 
 .about-heading {
   color: white;
-  font-style: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   text-align: center;
-  padding: 8rem 0rem;
+  padding: 8rem 1rem;
 }
 
 .about-text {
   color: white;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 0 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+.about-text ul {
+  color: white;
+}
+.about-text ul li {
+  color: white;
 }
 
 .link-more {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
-  color: blue;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
   padding: 1rem 1rem 4rem 1rem;
 }
 
-.boss {
-  width: 100%;
-  padding: 0 1rem;
-  filter: brightness(0.8);
-  border-radius: 15px;
-}
-
-.about-svg {
-  position: absolute;
-  z-index: -1000;
+.container {
+  /* Makes it stretch vertically to fit the container */
+  position: relative;
   overflow: hidden;
+}
+.container .about-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .services {
@@ -428,11 +433,12 @@ body {
   font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding: 8rem 1rem 3rem 1rem;
 }
 
 .contact {
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 6rem;
 }
 .contact__form, .contact__form-top {
