@@ -162,6 +162,16 @@ body {
 	z-index: 100;
 }
 .logo {
+	display: none;
+	width: 200px;
+	height: 100px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.logo-mobile {
 	width: 200px;
 	height: 100px;
 	img {
@@ -240,6 +250,7 @@ body {
 		&:hover {
 			color: black;
 		}
+		z-index: 100;
 	}
 }
 .house-icon {
@@ -287,8 +298,17 @@ body {
 	.burger-btn {
 		display: none;
 	}
+	.logo-mobile {
+		display: none;
+	}
+	.logo {
+		display: block;
+	}
 	.navbar {
 		display: flex;
+	}
+	.hero-text {
+		top: 15%;
 	}
 }
 
@@ -402,6 +422,7 @@ body {
 	gap: 25px;
 	padding-bottom: 5rem;
 	.services-card {
+		text-decoration: none;
 		height: 100px;
 		width: 95%;
 		background-color: #fff;
@@ -419,9 +440,12 @@ body {
 			font-size: 2.5rem;
 		}
 	}
+	.services-card:hover {
+		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s;
+	}
 	.card-1 {
 		background-image: url('/img/Rens-av-ventilasjonskanaler-1.webp');
-		text-decoration: none;
 	}
 	.card-2 {
 		background-image: url('/img/service.jpeg');
@@ -438,6 +462,20 @@ body {
 		background-image: url('/img/3751735.jpg');
 		background-size: cover;
 		background-position: bottom;
+	}
+}
+@media (min-width: 992px) {
+	.services-cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		.services-card {
+			height: 200px;
+			width: 40%;
+			.card-heading {
+				line-height: 200px;
+			}
+		}
 	}
 }
 
@@ -528,5 +566,39 @@ body {
 	&__bottom-text {
 		padding: 2rem;
 		text-align: center;
+	}
+}
+
+//Service1
+
+.hero-service {
+	position: relative;
+	margin-top: 10vh;
+	width: 100%;
+	height: 300px;
+	color: white;
+	.hero-service-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.4;
+	}
+	.hero-service-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 5rem;
+		text-transform: uppercase;
+	}
+}
+.service1-info {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 5rem;
+	p {
+		color: white;
+		font-size: 2.3rem;
+		line-height: 1.5;
 	}
 }
