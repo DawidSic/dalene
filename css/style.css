@@ -759,9 +759,9 @@ body {
 }
 .hero-service {
   position: relative;
-  margin-top: 10vh;
+  margin-top: 1vh;
   width: 100%;
-  height: 300px;
+  height: 200px;
   color: white;
 }
 .hero-service .hero-service-img {
@@ -780,7 +780,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -791,6 +791,19 @@ body {
 }
 .service1-info p {
   color: white;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+  .hero-service {
+    margin-top: 10vh;
+    height: 300px;
+  }
+  .hero-service .hero-service-text {
+    font-size: 5rem;
+  }
+  .service1-info p {
+    font-size: 2.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
