@@ -223,7 +223,7 @@ body {
 .hero .hero-button {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 20px;
   transform: translate(-50%, -50%);
   padding: 15px 25px;
   border-radius: 8px;
@@ -233,7 +233,6 @@ body {
   color: white;
   cursor: pointer;
   background-color: black;
-  z-index: 100;
 }
 .hero .hero-button::before {
   background-color: white;
@@ -250,7 +249,7 @@ body {
 }
 .house-icon .arrows {
   position: absolute;
-  bottom: -35%;
+  bottom: -25%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
