@@ -275,7 +275,7 @@ body {
 }
 @media (min-width: 768px) {
   .house-icon {
-    top: 40%;
+    top: 20%;
   }
 }
 @media (min-width: 992px) {
@@ -292,7 +292,7 @@ body {
     display: flex;
   }
   .hero-text {
-    top: 15%;
+    top: 50%;
   }
 }
 @media (min-width: 1200px) {
@@ -303,10 +303,10 @@ body {
     font-size: 5.5rem;
   }
   .house-icon {
-    top: 0;
+    top: 15%;
   }
   .house-icon .arrows {
-    bottom: -25%;
+    bottom: -20%;
     background-size: 20%;
     background-position: center;
   }
@@ -317,9 +317,6 @@ body {
   }
   .hero .hero-text h1 {
     font-size: 5.5rem;
-  }
-  .house-icon {
-    top: -10%;
   }
 }
 .about {
