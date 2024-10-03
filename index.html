@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +49,7 @@
 
     <div class="hero">
         <div class="hero-text">
-            <h1>ALT INNEN BOLIG VENTILASJON</h1>
+            <h1>ALT INNEN BOLIG<wbr>VENTILASJON</h1>
         </div>
         <div class="house-icon">
             <svg class="testing" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="1">
@@ -59,17 +60,18 @@
 
             <div class="arrows"></div>
         </div>
-        <a href="#about"><button class="hero-button btn-special-animation">Finn ut meir</button></a>
+        <!-- <a href="#about"><button class="hero-button btn-special-animation">Finn ut meir</button></a> -->
+        <a href="#about"><i class="arrow-down fa-solid fa-chevron-down"></i></a>
     </div>
 
-    <div class="container">
+    <div class="container first-cont" ">
 
 
-        <svg class="about-svg" viewBox="0 00 100 400" xmlns="http://www.w3.org/2000/svg">
-            <line x1="5" y1="400" x2="5" y2="0" stroke="white" stroke-width="1" />
-            <line x1="95" y1="400" x2="95" y2="0" stroke="white" stroke-width="1" />
+        <svg class=" about-svg" viewBox="0 00 100 400" xmlns="http://www.w3.org/2000/svg">
+        <line x1="5" y1="400" x2="5" y2="0" stroke="white" stroke-width="1" />
+        <line x1="95" y1="400" x2="95" y2="0" stroke="white" stroke-width="1" />
 
-            <!-- If you do not specify the stroke
+        <!-- If you do not specify the stroke
              color the line will not be visible -->
         </svg>
 
@@ -109,12 +111,12 @@
                  color the line will not be visible -->
         </svg>
 
-        <section class="services" id="services">
+        <section class="services" id="services" data-aos="fade-up">
             <h2 class="services-top">Våre Tjenester</h2>
             <h3 class="services-heading">Dalene ventilasjon utfører alt av ventilasjonsarbeid til din bustad </h3>
             <div class="services-cards">
                 <a href="service1.html" class="services-card card-1">
-                    <h3 class="card-heading">KANAL RENSING</h3>
+                    <h3 class="card-heading">KANALRENSING</h3>
                 </a>
 
                 <a href="service2.html" class="services-card card-2">
@@ -124,11 +126,11 @@
                     <h3 class="card-heading">BALANSERT VENTILASJON</h3>
                 </a>
                 <a href="service4.html" class="services-card card-4">
-                    <h3 class="card-heading">BADEROMSVIFTE</h3>
+                    <h3 class="card-heading">VIFTE, VENTILATOR, ANNET...</h3>
                 </a>
-                <a href="service5.html" class="services-card card-5">
+                <!-- <a href="service5.html" class="services-card card-5">
                     <h3 class="card-heading">KJØKKENVENTILATOR</h3>
-                </a>
+                </a> -->
             </div>
         </section>
     </div>
@@ -252,6 +254,10 @@
 
 
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="./js/script.js"></script>
 
 </html>
