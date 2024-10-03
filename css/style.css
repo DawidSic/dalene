@@ -347,13 +347,26 @@ body {
   color: white;
 }
 
-.link-more {
-  display: block;
-  font-size: 2rem;
-  text-align: center;
+.pop-up-window {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 20px 20px 20px 0;
+  border: 3px solid white;
+  width: 200px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.741);
+  z-index: 100000;
+}
+.pop-up-window p {
+  font-size: 1.7rem;
   color: white;
-  text-decoration: underline;
-  padding: 1rem 1rem 4rem 1rem;
+  text-align: center;
+  line-height: 57px;
+}
+.pop-up-window p a {
+  text-decoration: none;
+  color: royalblue;
 }
 
 .container {
@@ -785,9 +798,9 @@ body {
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 5rem;
+  color: white;
 }
 .service1-info p {
-  color: white;
   font-size: 1.8rem;
   line-height: 1.5;
 }
