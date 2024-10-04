@@ -218,7 +218,7 @@ body {
 // 	border-right: solid 4.5px white;
 // }
 .hero {
-	height: 90vh;
+	height: 100vh;
 	.hero-text {
 		position: absolute;
 		top: 25%;
@@ -258,7 +258,7 @@ body {
 		position: absolute;
 		text-align: center;
 		width: 100%;
-		bottom: 0;
+		bottom: 5px;
 		font-size: 5rem;
 		animation: move 1.5s infinite ease-in-out;
 	}
@@ -431,7 +431,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-top: 5rem;
+		// margin-top: 6rem;
 		.about-text {
 			width: 60%;
 			text-align: center;
