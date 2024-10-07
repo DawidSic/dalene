@@ -244,7 +244,7 @@ body {
 }
 .house-icon {
   position: relative;
-  top: 55%;
+  top: 45%;
   width: 100%;
   z-index: -1000;
 }
@@ -404,7 +404,7 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .services-heading {
