@@ -231,28 +231,30 @@ body {
 			font-weight: 400;
 		}
 	}
-	// .hero-button {
-	// 	position: absolute;
-	// 	left: 50%;
-	// 	bottom: 0;
-	// 	transform: translate(-50%, -50%);
-	// 	padding: 15px 25px;
-	// 	border-radius: 8px;
-	// 	font-size: 2rem;
-	// 	background-color: transparent;
-	// 	border: 3px solid white;
-	// 	color: white;
-	// 	cursor: pointer;
-	// 	// background-color: black;
-	// 	z-index: 10;
-	// 	&::before {
-	// 		background-color: white;
-	// 	}
-	// 	&:hover {
-	// 		color: black;
-	// 	}
-	// }
+	.hero-button {
+		display: none;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, -50%);
+		padding: 15px 25px;
+		border-radius: 8px;
+		font-size: 2rem;
+		background-color: transparent;
+		border: 3px solid white;
+		color: white;
+		cursor: pointer;
+		// background-color: black;
+		z-index: 10;
+		&::before {
+			background-color: white;
+		}
+		&:hover {
+			color: black;
+		}
+	}
 	.arrow-down {
+		display: block;
 		z-index: 10;
 		color: white;
 		position: absolute;
@@ -294,7 +296,7 @@ body {
 }
 .testing {
 	max-width: 100%;
-	max-height: 100vw;
+	max-height: 140vw;
 }
 
 @media (max-height: 700px) {
@@ -313,6 +315,15 @@ body {
 @media (min-width: 768px) {
 	.house-icon {
 		top: 20%;
+		.arrows {
+			bottom: -20%;
+			background-size: 20%;
+		}
+	}
+	.hero {
+		.hero-text {
+			top: 50%;
+		}
 	}
 }
 @media (min-width: 992px) {
@@ -328,8 +339,17 @@ body {
 	.navbar {
 		display: flex;
 	}
-	.hero-text {
-		top: 50%;
+	.hero {
+		.hero-text {
+			top: 50%;
+		}
+		.hero-button {
+			display: block;
+		}
+
+		.arrow-down {
+			display: none;
+		}
 	}
 }
 
@@ -345,8 +365,8 @@ body {
 	.house-icon {
 		top: 15%;
 		.arrows {
-			bottom: -20%;
-			background-size: 20%;
+			bottom: -10%;
+			background-size: 15%;
 			background-position: center;
 		}
 	}
