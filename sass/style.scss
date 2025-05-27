@@ -211,12 +211,7 @@ body {
 		}
 	}
 }
-// section {
-// 	margin-left: 4.5%;
-// 	margin-right: 4.7%;
-// 	border-left: solid 4.5px white;
-// 	border-right: solid 4.5px white;
-// }
+
 .hero {
 	height: 100vh;
 	.hero-text {
@@ -244,7 +239,6 @@ body {
 		border: 3px solid white;
 		color: white;
 		cursor: pointer;
-		// background-color: black;
 		z-index: 10;
 		&::before {
 			background-color: white;
@@ -386,7 +380,6 @@ body {
 .about {
 	padding-left: 5%;
 	padding-right: 5%;
-	// margin-top: 8rem;
 }
 
 .about-heading {
@@ -410,31 +403,7 @@ body {
 	}
 }
 
-.pop-up-window {
-	position: fixed;
-	bottom: 20px;
-	left: 20px;
-	border-radius: 20px 20px 20px 0;
-	border: 3px solid white;
-	width: 200px;
-	height: 60px;
-	background-color: rgba(0, 0, 0, 0.741);
-	z-index: 100000;
-	p {
-		font-size: 1.7rem;
-		color: white;
-		text-align: center;
-		line-height: 57px;
-		a {
-			text-decoration: none;
-			color: royalblue;
-		}
-	}
-}
-
 .container {
-	/* Makes it stretch vertically to fit the container */
-	// height: 100vh; /* Ensure the container takes the full viewport height */
 	position: relative;
 	overflow: hidden;
 	.about-svg {
@@ -644,11 +613,11 @@ body {
 		min-width: 87%;
 		max-width: 87%;
 		width: 87%;
-		height: 300px;
+		height: 220px;
 		margin: 0 auto 2rem auto;
 	}
 	.contact {
-		padding: 0 8rem;
+		padding: 0 40rem;
 		.contact-text {
 			text-align: center;
 			font-size: 2.5rem;
@@ -657,47 +626,6 @@ body {
 }
 
 //FOOTER
-
-// .footer {
-// 	color: white;
-// 	background-color: #333;
-// 	border-top: white 2px solid;
-// 	&__bottom-text {
-// 		padding: 0rem 2rem 2rem 0rem;
-// 		text-align: center;
-// 	}
-// 	.wrapper{
-// 		.footer-list{
-// 			height: 100px;
-// 			display: flex;
-// 			flex-direction: row;
-// 			flex-wrap: wrap;
-// 			align-content: space-evenly;
-// 			text-align: center;
-// 			// column-count: 2;
-// 			list-style: none;
-// 			.list-item{
-// 				width: 50%;
-// 				a{
-// 					color: white;
-// 					text-decoration: none;
-// 					font-size: 1.8rem;
-// 					line-height: 1.4;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// section {
-// 	width: 100%;
-// 	display: inline-block;
-// 	background: #333;
-// 	height: 50vh;
-// 	text-align: center;
-// 	font-size: 22px;
-// 	font-weight: 700;
-// 	text-decoration: underline;
-//   }
 
 .footer-distributed {
 	background: black;
@@ -905,9 +833,6 @@ body {
 	.five {
 		object-position: bottom;
 	}
-	// .four{
-	// 	object-position: top;
-	// }
 
 	.hero-service-text {
 		position: absolute;
@@ -916,17 +841,33 @@ body {
 		transform: translate(-50%, -50%);
 		font-size: 3rem;
 		text-transform: uppercase;
+		text-align: center;
 	}
 }
-.service1-info {
-	padding-left: 5%;
-	padding-right: 5%;
+.service1-info,
+.service1-heading {
+	padding-left: 8%;
+	padding-right: 8%;
 	margin-top: 5rem;
 	color: white;
-	p {
+	p,
+	ul {
 		font-size: 1.8rem;
 		line-height: 1.5;
+		span {
+			font-weight: bold;
+		}
 	}
+	ul {
+		margin-top: 2rem;
+		padding-left: 8%;
+		margin-bottom: 2rem;
+		font-weight: bold;
+	}
+}
+.service1-heading {
+	font-size: 2.2rem;
+	text-align: center;
 }
 @media (min-width: 992px) {
 	.hero-service {
@@ -937,8 +878,16 @@ body {
 		}
 	}
 	.service1-info {
-		p {
+		p,
+		ul {
 			font-size: 2.3rem;
+			padding: 0 10%;
 		}
+		ul {
+			padding-left: 14%;
+		}
+	}
+	.service1-heading {
+		font-size: 2.5rem;
 	}
 }
