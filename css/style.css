@@ -405,7 +405,7 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 0;
 }
 
 .services-heading {
@@ -468,6 +468,9 @@ body {
 }
 
 @media (min-width: 992px) {
+  .services-top {
+    margin-top: 8rem;
+  }
   .services-cards {
     flex-direction: row;
     flex-wrap: wrap;
