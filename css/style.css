@@ -241,17 +241,6 @@ body {
 .hero .hero-button:hover {
   color: black;
 }
-.hero .arrow-down {
-  display: block;
-  z-index: 10;
-  color: white;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 5px;
-  font-size: 5rem;
-  animation: move 1.5s infinite ease-in-out;
-}
 
 @keyframes move {
   0% {
@@ -365,7 +354,7 @@ body {
   font-size: 3rem;
   font-weight: 300;
   text-align: center;
-  padding: 8rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .about-text {
